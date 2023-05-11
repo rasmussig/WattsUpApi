@@ -4,6 +4,10 @@ const { Pool } = require('pg');
 const app = express();
 const port = 3000;
 
+app.use(cors({
+  orgin: '*'
+}));
+
 // Opret en databasepool
 const pool = new Pool({
   user: 'bssuxilu',
